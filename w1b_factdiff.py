@@ -21,7 +21,7 @@ def getNumOfDec(A):
         return 1
     X = abs(A)
     while True:
-        X = X/10
+        X = int(X/10)
         i = i + 1
         if (X==0):
             break
@@ -32,7 +32,7 @@ print(ZDecLength)
 
 def getNumOfBytes(A):
     l = A.bit_length()
-    byte = l/8 + (0 if(l%8 == 0) else 1)
+    byte = int(l/8) + (0 if(l%8 == 0) else 1)
     return byte
 
 ZOxLength = getNumOfBytes(Z)
